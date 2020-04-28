@@ -21,19 +21,6 @@ body {
   font-family: Fattylee;
   background: papayawhip;
 }
-.js-site {
-  display: none;
-}
-.no-js {
-  padding: 20px;
-  text-align: center;
-}
-.no-js span {
-  font-size: 50px;
-  text-transform: uppercase;
-  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
-  color: greenyellow;
-}
 
 .container {
   border: 1px solid crimson;
