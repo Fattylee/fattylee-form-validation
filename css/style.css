@@ -22,40 +22,41 @@ body {
   font-family: Fattylee;
   background: papayawhip;
 }
-.nav{
-background: grey;
-width: 100%;
-margin-bottom: 20px;
+.nav {
+  background: grey;
+  width: 100%;
+  margin-bottom: 20px;
 }
-.nav ul{
-list-style-type:none;
-padding: 0;
-margin: 0;
-display: flex;
-flex-direction: column;
-/* justify-content: space-between; */
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
 }
 
-.nav a{
-text-decoration: none;
-color: #fff;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 1.2rem;
-display: block;
-padding: 10px 13px;
-border-bottom: 1px solid transparent;
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  display: block;
+  padding: 10px 13px;
+  border-bottom: 1px solid transparent;
 }
-nav a:hover, nav li.active a{
-background: white;
-border-bottom: 1px solid gold;
-color: black;
-
+nav a:hover,
+nav li.active a {
+  background: papayawhip;
+  border-bottom: 1px solid gold;
+  color: black;
 }
 .container {
   border: 1px solid crimson;
   width: 300px;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+  position: relative;
 }
 .container.hide {
   display: none;
@@ -171,18 +172,55 @@ color: black;
   background: white;
   color: #bb3c54;
 }
-.grid-box{
-display: flex;
-grid-template-columns: 1fr 2fr 3fr;
+.grid-box {
+  display: flex;
+  grid-template-columns: 1fr 2fr 3fr;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
+  .nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav a:hover,
+  nav li.active a {
+    background: papayawhip;
+    border-color: transparent;
+    color: black;
+  }
+  .nav {
+  }
+}
 
-.nav ul{
-  flex-direction: row;
+/*------------- LOADER -------------*/
+.loader {
+  background: #65560a;
+  display: none;
+  position: absolute;
+  width: 80%;
   justify-content: space-between;
+  bottom: 94px;
+  left: 30px;
+  padding: 10px 20px;
+  color: white;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
 }
-.nav a{
-border: none;
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
+.loader p {
+  margin: 0;
 }
+/*-------x------ LOADER ------x-------*/
