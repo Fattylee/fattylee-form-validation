@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Form Validation</title>
+    <link rel="shortcut icon" href="./img/preview.png" />
     <!-- import fontawesome css library -->
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <script>
+      window.onload = function () {
+        document.querySelector(".js-site").className = "container";
+        document.querySelector(".no-js").className = "js-site no-js";
+      };
+    </script>
   </head>
   <body>
-    <div class="container">
+    <div class="container js-site">
       <div class="header">
         <h1>Create account</h1>
       </div>
@@ -53,5 +60,11 @@
       <p>To see more content <a href="#">Click here</a></p>
     </div>
     <script src="./js/main.js"></script>
+    <div class="no-js">
+      <h1>
+        Oops..! No Javascript Enabled. please enable javascript
+        <span>or</span> choose a different browser for best experience
+      </h1>
+    </div>
   </body>
 </html>
