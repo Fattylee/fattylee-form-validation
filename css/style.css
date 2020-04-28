@@ -28,6 +28,9 @@ body {
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
 }
+.container.hide {
+  display: none;
+}
 .header {
   padding: 20px 30px;
   background: #bb3c54;
@@ -40,7 +43,7 @@ body {
 }
 
 .form-control {
-  padding: 15px 30px;
+  padding: 20px 30px;
   padding-top: 10px;
   position: relative;
 }
@@ -103,4 +106,39 @@ body {
 .form [type="submit"]:hover {
   color: #bb3c54;
   background: white;
+}
+/* Modal popup styling
+ * */
+.modal {
+  text-align: center;
+  display: none;
+}
+.modal.show {
+  display: block;
+}
+.modal h2 {
+  color: gold;
+  font-size: 32px;
+  text-shadow: 0 4px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+}
+.modal p {
+  font-size: 24px;
+  color: maroon;
+}
+.modal a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  background: #bb3c54;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3);
+  border-bottom: 3px solid maroon;
+  transition: all 0.5s;
+}
+.modal a:hover {
+  background: white;
+  color: #bb3c54;
 }
