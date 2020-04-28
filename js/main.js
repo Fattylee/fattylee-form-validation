@@ -49,9 +49,13 @@ function handleFormValidation(event) {
   }
 
   if (isValid) {
-    clearAllFields();
-    restoreFormState();
-    showModal();
+    document.querySelector(".loader").style.display = "flex";
+    setTimeout(() => {
+      clearAllFields();
+      restoreFormState();
+      showModal();
+      document.querySelector(".loader").style.display = "none";
+    }, 3000);
   }
 } // End handleFormValidation
 

@@ -27,6 +27,7 @@ body {
   width: 300px;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+  position: relative;
 }
 .container.hide {
   display: none;
@@ -142,3 +143,36 @@ body {
   background: white;
   color: #bb3c54;
 }
+
+/*------------- LOADER -------------*/
+.loader {
+  background: #65560a;
+  display: none;
+  position: absolute;
+  width: 80%;
+  justify-content: space-between;
+  bottom: 94px;
+  left: 30px;
+  padding: 10px 20px;
+  color: white;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.loader p {
+  margin: 0;
+}
+/*-------x------ LOADER ------x-------*/
