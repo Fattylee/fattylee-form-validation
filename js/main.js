@@ -89,3 +89,15 @@ function restoreFormState() {
     e.parentElement.className = "form-control";
   });
 }
+
+// Set eventHandlers on each span inside the sidebar component
+(function() {
+  document.querySelectorAll(".sidebar span").forEach((span) => {
+    span.addEventListener("click", (event) => {
+      const spanColor = getComputedStyle(event.target).backgroundColor;
+      document
+        .querySelector(":root")
+        .style.setProperty("--theme-bgcolor", spanColor);
+    });
+  });
+})();
