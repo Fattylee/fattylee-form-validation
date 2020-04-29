@@ -24,12 +24,6 @@
         color: greenyellow;
       }
     </style>
-    <script>
-      window.onload = function () {
-        document.querySelector(".js-site").className = "container";
-        document.querySelector(".no-js").className = "js-site no-js";
-      };
-    </script>
   </head>
   <body>
     <nav class="nav">
@@ -93,5 +87,11 @@
         <span>or</span> choose a different browser for best experience
       </h1>
     </div>
+    <script>
+      (function () {
+        document.querySelector(".js-site").className = "container";
+        document.querySelector(".no-js").className = "js-site no-js";
+      })();
+    </script>
   </body>
 </html>
