@@ -1,15 +1,26 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --theme-bgcolor: papayawhip;
+  --theme-header: #bb3c54;
+  --success-border: #679a19;
+  --error-border: red;
+}
+@media screen and (max-width: 400px) {
+  * {
+    /* --theme-bgcolor: coral; */
+    --theme-header: #bb3c54;
+    --success-border: #679a19;
+    --error-border: red;
+  }
+}
 /* import a custom font (Abel) but change the name to fattylee */
 @font-face {
   font-family: "fattylee";
   src: url(./Abel-Regular.ttf);
 }
-/*
- * successColor=#679a19
- * backgroundButton=#bb3c54
- * */
+
 body {
   margin: 0;
   padding: 0;
@@ -19,7 +30,7 @@ body {
   height: 100vh;
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: Fattylee;
-  background: papayawhip;
+  background: var(--theme-bgcolor);
 }
 
 .container {
@@ -34,7 +45,7 @@ body {
 }
 .header {
   padding: 20px 30px;
-  background: #bb3c54;
+  background: var(--theme-header);
   border-bottom: 1px solid grey;
 }
 .header h1 {
@@ -61,15 +72,15 @@ body {
   border: 1px solid;
 }
 .form-control.success input {
-  border-color: #679a19;
-  outline-color: #679a19;
+  border-color: var(--success-border);
+  outline-color: var(--success-border);
 }
 .form-control input:focus {
   border-color: black;
 }
 .form-control.error input {
-  border-color: red;
-  outline-color: red;
+  border-color: var(--error-border);
+  outline-color: var(--error-border);
 }
 .form-control i {
   position: absolute;
@@ -78,16 +89,16 @@ body {
   visibility: hidden;
 }
 .form-control.success i.fa-check-circle {
-  color: #679a19;
+  color: var(--success-border);
   visibility: visible;
 }
 .form-control.error i.fa-exclamation-circle {
-  color: red;
+  color: var(--error-border);
   visibility: visible;
 }
 .form-control small {
   position: absolute;
-  color: red;
+  color: var(--error-border);
   visibility: hidden;
 }
 .form-control.error small {
@@ -96,7 +107,7 @@ body {
 
 .form [type="submit"] {
   color: white;
-  background: #bb3c54;
+  background: var(--theme-header);
   display: block;
   width: 100%;
   margin: 20px auto;
@@ -105,7 +116,7 @@ body {
   text-transform: capitalize;
 }
 .form [type="submit"]:hover {
-  color: #bb3c54;
+  color: var(--theme-header);
   background: white;
 }
 /* Modal popup styling
@@ -131,7 +142,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: white;
-  background: #bb3c54;
+  background: var(--theme-header);
   display: inline-block;
   padding: 5px 10px;
   border-radius: 5px;
@@ -141,7 +152,7 @@ body {
 }
 .modal a:hover {
   background: white;
-  color: #bb3c54;
+  color: var(--theme-header);
 }
 
 /*------------- LOADER -------------*/
