@@ -114,6 +114,7 @@ body {
   padding: 15px;
   cursor: pointer;
   text-transform: capitalize;
+  outline-color: var(--theme-header);
 }
 .form [type="submit"]:hover {
   color: var(--theme-header);
@@ -187,3 +188,60 @@ body {
   margin: 0;
 }
 /*-------x------ LOADER ------x-------*/
+
+/*------- No js styling --------*/
+.js-site {
+  display: none;
+}
+.no-js {
+  padding: 20px;
+  text-align: center;
+}
+.no-js span {
+  font-size: 50px;
+  text-transform: uppercase;
+  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+  color: greenyellow;
+}
+/*---x--- No js styling ----x---*/
+
+/*------- sidebar --------*/
+.sidebar {
+  position: fixed;
+  display: flex;
+  min-height: 70px;
+  top: 10vh;
+  left: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.sidebar span {
+  background: red;
+  padding: 10px;
+  border: 1px var(--theme-bgcolor) solid;
+  transition: transform 0.4s;
+}
+.sidebar span:hover {
+  border-color: var(--theme-header);
+  transform: scale(1.2);
+}
+
+.sidebar span:nth-child(2) {
+  background: pink;
+}
+.sidebar span:nth-child(3) {
+  background: paleturquoise;
+}
+@media screen and (max-width: 378px) {
+  .sidebar {
+    flex-direction: row;
+    position: static;
+    min-height: 0;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 3px 3px 0 0;
+  }
+}
+/*---x--- sidebar ----x---*/
