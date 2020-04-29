@@ -1,15 +1,26 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --theme-bgcolor: papayawhip;
+  --theme-header: #bb3c54;
+  --success-border: #679a19;
+  --error-border: red;
+}
+@media screen and (max-width: 400px) {
+  * {
+    /* --theme-bgcolor: coral; */
+    --theme-header: #bb3c54;
+    --success-border: #679a19;
+    --error-border: red;
+  }
+}
 /* import a custom font (Abel) but change the name to fattylee */
 @font-face {
   font-family: "fattylee";
   src: url(./Abel-Regular.ttf);
 }
-/*
- * successColor=#679a19
- * backgroundButton=#bb3c54
- * */
+
 body {
   margin: 0;
   padding: 0;
@@ -19,7 +30,7 @@ body {
   height: 100vh;
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: Fattylee;
-  background: papayawhip;
+  background: var(--theme-bgcolor);
 }
 
 .container {
@@ -34,7 +45,7 @@ body {
 }
 .header {
   padding: 20px 30px;
-  background: #bb3c54;
+  background: var(--theme-header);
   border-bottom: 1px solid grey;
 }
 .header h1 {
@@ -61,15 +72,15 @@ body {
   border: 1px solid;
 }
 .form-control.success input {
-  border-color: #679a19;
-  outline-color: #679a19;
+  border-color: var(--success-border);
+  outline-color: var(--success-border);
 }
 .form-control input:focus {
   border-color: black;
 }
 .form-control.error input {
-  border-color: red;
-  outline-color: red;
+  border-color: var(--error-border);
+  outline-color: var(--error-border);
 }
 .form-control i {
   position: absolute;
@@ -78,16 +89,16 @@ body {
   visibility: hidden;
 }
 .form-control.success i.fa-check-circle {
-  color: #679a19;
+  color: var(--success-border);
   visibility: visible;
 }
 .form-control.error i.fa-exclamation-circle {
-  color: red;
+  color: var(--error-border);
   visibility: visible;
 }
 .form-control small {
   position: absolute;
-  color: red;
+  color: var(--error-border);
   visibility: hidden;
 }
 .form-control.error small {
@@ -96,16 +107,17 @@ body {
 
 .form [type="submit"] {
   color: white;
-  background: #bb3c54;
+  background: var(--theme-header);
   display: block;
   width: 100%;
   margin: 20px auto;
   padding: 15px;
   cursor: pointer;
   text-transform: capitalize;
+  outline-color: var(--theme-header);
 }
 .form [type="submit"]:hover {
-  color: #bb3c54;
+  color: var(--theme-header);
   background: white;
 }
 /* Modal popup styling
@@ -131,7 +143,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: white;
-  background: #bb3c54;
+  background: var(--theme-header);
   display: inline-block;
   padding: 5px 10px;
   border-radius: 5px;
@@ -141,7 +153,7 @@ body {
 }
 .modal a:hover {
   background: white;
-  color: #bb3c54;
+  color: var(--theme-header);
 }
 
 /*------------- LOADER -------------*/
@@ -176,3 +188,60 @@ body {
   margin: 0;
 }
 /*-------x------ LOADER ------x-------*/
+
+/*------- No js styling --------*/
+.js-site {
+  display: none;
+}
+.no-js {
+  padding: 20px;
+  text-align: center;
+}
+.no-js span {
+  font-size: 50px;
+  text-transform: uppercase;
+  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+  color: greenyellow;
+}
+/*---x--- No js styling ----x---*/
+
+/*------- sidebar --------*/
+.sidebar {
+  position: fixed;
+  display: flex;
+  min-height: 70px;
+  top: 10vh;
+  left: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.sidebar span {
+  background: red;
+  padding: 10px;
+  border: 1px var(--theme-bgcolor) solid;
+  transition: transform 0.4s;
+}
+.sidebar span:hover {
+  border-color: var(--theme-header);
+  transform: scale(1.2);
+}
+
+.sidebar span:nth-child(2) {
+  background: pink;
+}
+.sidebar span:nth-child(3) {
+  background: paleturquoise;
+}
+@media screen and (max-width: 378px) {
+  .sidebar {
+    flex-direction: row;
+    position: static;
+    min-height: 0;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 3px 3px 0 0;
+  }
+}
+/*---x--- sidebar ----x---*/
