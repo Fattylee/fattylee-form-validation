@@ -32,6 +32,7 @@ body {
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: Fattylee;
   background: var(--theme-bgcolor);
+<<<<<<< HEAD
 }
 .nav {
   background: grey;
@@ -45,6 +46,8 @@ body {
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
+=======
+>>>>>>> 75821e7aca421d3c8dd6fb3eaea0431ddca6311e
 }
 
 .nav a {
@@ -199,8 +202,6 @@ nav li.active a {
     background: papayawhip;
     border-color: transparent;
     color: black;
-  }
-  .nav {
   }
 }
 
