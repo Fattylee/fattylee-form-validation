@@ -49,9 +49,13 @@ function handleFormValidation(event) {
   }
 
   if (isValid) {
-    clearAllFields();
-    restoreFormState();
-    showModal();
+    document.querySelector(".loader").style.display = "flex";
+    setTimeout(() => {
+      clearAllFields();
+      restoreFormState();
+      showModal();
+      document.querySelector(".loader").style.display = "none";
+    }, 3000);
   }
 } // End handleFormValidation
 
@@ -85,3 +89,15 @@ function restoreFormState() {
     e.parentElement.className = "form-control";
   });
 }
+
+// Set eventHandlers on each span inside the sidebar component
+(function() {
+  document.querySelectorAll(".sidebar span").forEach((span) => {
+    span.addEventListener("click", (event) => {
+      const spanColor = getComputedStyle(event.target).backgroundColor;
+      document
+        .querySelector(":root")
+        .style.setProperty("--theme-bgcolor", spanColor);
+    });
+  });
+})();
