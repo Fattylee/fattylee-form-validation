@@ -12,10 +12,12 @@ p:not(:last-child):hover{
   width: 90%;
 margin: 10px auto;
 border: 1px solid grey;
+/* text-align: center; */
 }
 .dynamic-table thead,
 .dynamic-table tbody{
   margin: 0;
+  padding: 0;
 }
 .dynamic-table tr{
 display: flex;
