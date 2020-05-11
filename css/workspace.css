@@ -1,0 +1,68 @@
+:root {
+  --btn-3d-color: #f0e4dd;
+  --btn-3d-bgcolor: hsl(16, 100%, 30%);
+  /* --btn-3d-bgcolor: rgba(13, 49, 2, 0.8); */
+  /* --btn-3d-bgcolor-dark: rgba(13, 49, 2, 1); */
+  --btn-3d-bgcolor-dark: hsl(16, 100%, 20%);
+}
+
+button.btn-3d {
+  font-size: 2rem;
+  border: none;
+  margin: 20px;
+  color: var(--btn-3d-color);
+  background: var(--btn-3d-bgcolor);
+  padding: 15px 20px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  /* 3d effects styling */
+
+  box-shadow: -6px 6px rgba(0, 0, 0, 0.4);
+}
+button.btn-3d:hover {
+  top: 3px;
+  left: -3px;
+  box-shadow: -3px 3px rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+}
+button.btn-3d::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -12px;
+  border: 6px solid transparent;
+  border-right-color: rgba(0, 0, 0, 0.4);
+  /* border-left-color: transparent; */
+  /* border-right-color: transparent; */
+  /* border-top-color: transparent; */
+  opacity: 0.5;
+}
+.para-list {
+  background: rgba(69, 106, 14, 1);
+  padding: 10px;
+}
+.para-list p {
+  position: relative;
+  margin: 30px 0;
+  background: red;
+  box-shadow: -8px 8px rgba(0, 0, 0, 0.4);
+}
+.para-list p::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  /* padding: 0 20px; */
+  border: 8px solid transparent;
+  border-right-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  top: 0;
+  left: -16px;
+}
+
+.para-list p:not(:last-child):hover {
+  background: rgba(69, 255, 14, 1);
+  top: 4px;
+  left: -4px;
+  box-shadow: -4px 4px rgba(0, 0, 0, 0.4);
+}

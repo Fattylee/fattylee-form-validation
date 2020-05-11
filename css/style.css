@@ -188,19 +188,6 @@ nav li.active a {
   grid-template-columns: 1fr 2fr 3fr;
 }
 
-@media screen and (min-width: 768px) {
-  .nav ul {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  nav a:hover,
-  nav li.active a {
-    background: papayawhip;
-    border-color: transparent;
-    color: black;
-  }
-}
-
 /*------------- LOADER -------------*/
 .loader {
   background: #65560a;
@@ -287,6 +274,19 @@ nav li.active a {
     margin-bottom: 10px;
     border: 1px solid;
     border-radius: 3px 3px 0 0;
+    top: 10vh;
   }
 }
 /*---x--- sidebar ----x---*/
+@media screen and (min-width: 768px) {
+  .nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav a:hover,
+  nav li.active a {
+    background: papayawhip;
+    border-color: transparent;
+    color: black;
+  }
+}
