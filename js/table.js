@@ -28,38 +28,43 @@ function buildTable(data) {
   });
 
   function handleSort(event) {
-    const col = event.target.getAttribute("data-col");
-    const sort = event.target.getAttribute("data-sort");
-    const caret = event.target.querySelector("i");
-    console.log(caret);
-    console.log(event.target);
+    let header = event.target;
+    let col = header.getAttribute("data-col");
+    let sort = header.getAttribute("data-sort");
+    let caret = header.querySelector("i");
+    if (!caret) {
+      col = header.parentElement.getAttribute("data-col");
+      sort = header.parentElement.getAttribute("data-sort");
+      caret = header;
+      header = header.parentElement;
+    }
     if (col == "name") {
       if (sort == "asc") {
-        event.target.setAttribute("data-sort", "desc");
+        header.setAttribute("data-sort", "desc");
         arr.sort((a, b) => (a.name > b.name ? -1 : 1));
         caret.className = "fas fa-caret-down";
       } else {
-        event.target.setAttribute("data-sort", "asc");
+        header.setAttribute("data-sort", "asc");
         arr.sort((a, b) => (a.name < b.name ? -1 : 1));
         caret.className = "fas fa-caret-up";
       }
     } else if (col == "age") {
       if (sort == "asc") {
-        event.target.setAttribute("data-sort", "desc");
+        header.setAttribute("data-sort", "desc");
         arr.sort((a, b) => (a.age > b.age ? -1 : 1));
         caret.className = "fas fa-caret-down";
       } else {
-        event.target.setAttribute("data-sort", "asc");
+        header.setAttribute("data-sort", "asc");
         arr.sort((a, b) => (a.age < b.age ? -1 : 1));
         caret.className = "fas fa-caret-up";
       }
     } else {
       if (sort == "asc") {
-        event.target.setAttribute("data-sort", "desc");
+        header.setAttribute("data-sort", "desc");
         arr.sort((a, b) => (a.birthday > b.birthday ? -1 : 1));
         caret.className = "fas fa-caret-down";
       } else {
-        event.target.setAttribute("data-sort", "asc");
+        header.setAttribute("data-sort", "asc");
         arr.sort((a, b) => (a.birthday < b.birthday ? -1 : 1));
         caret.className = "fas fa-caret-up";
       }

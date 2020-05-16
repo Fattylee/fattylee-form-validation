@@ -59,28 +59,32 @@ color:white !important
 }
 */
 
-  .dynamic-table {
-background:#b300b3;
-width: 100%;
-color: white;
-text-align: left;
-border-collapse: collapse;
-  }
-  .dynamic-table th, .dynamic-table td{
-border-bottom: 1px solid grey;
-padding: 8px;
-  }
-  .dynamic-table tr:nth-child(odd){
-background:  #ff99ff;
-  }
-  .dynamic-table tr:hover{
-background: red;
-  }
-  .dynamic-table thead th {
-background: #330033;
-padding: 20px 8px;
-background: cyan;
-  }
+.dynamic-table {
+  background: #b300b3;
+  width: 100%;
+  color: white;
+  text-align: left;
+  border-collapse: collapse;
+}
+.dynamic-table th {
+  cursor: pointer;
+}
+.dynamic-table th,
+.dynamic-table td {
+  border-bottom: 1px solid grey;
+  padding: 8px;
+}
+.dynamic-table tr:nth-child(odd) {
+  background: #ff99ff;
+}
+.dynamic-table tr:hover {
+  background: red;
+}
+.dynamic-table thead th {
+  background: #330033;
+  padding: 20px 8px;
+  background: cyan;
+}
 
 :root {
   --btn-3d-color: #f0e4dd;
