@@ -22,40 +22,65 @@ p:not(:last-child):hover {
     brown
   );
 }
+/*
+.dynamic-table th, .dynamic-table td{
+padding: 8px;
+}
+.dynamic-table thead th,
+.dynamic-table thead th:hover{
+background: green;
+}
+.dynamic-table tr:nth-child(even) {
+  background: green;
+}
+.dynamic-table tr:nth-child(odd) {
+  background: red;
+}
+.dynamic-table tr:nth-child(even):hover {
+  color: green;
+  background: white;
+}
+.dynamic-table tr:nth-child(odd):hover {
+  color: red;
+  background: white;
+}
 
 .dynamic-table {
   border-collapse: collapse;
   width: 90%;
   margin: 10px auto;
   border: 1px solid grey;
-  /* text-align: center; */
-}
-.dynamic-table thead,
-.dynamic-table tbody {
-  margin: 0;
-  padding: 0;
-}
-.dynamic-table tr {
-  display: flex;
-  justify-content: space-between;
-}
-.dynamic-table thead tr {
-  background: red;
+  text-align: left;
   color: white;
 }
-.dynamic-table-striped tbody tr:nth-child(odd) {
-  background: grey;
+.dynamic-table thead tr:hover {
+background: green !important;
+color:white !important
 }
-.dynamic-table-striped tbody tr:nth-child(even) {
-  background: skyblue;
-}
-.dynamic-table-striped {
-  border: none;
-}
+*/
 
-.dynamic-table-striped tr {
-  color: white;
-}
+  .dynamic-table {
+background:#b300b3;
+width: 100%;
+color: white;
+text-align: left;
+border-collapse: collapse;
+  }
+  .dynamic-table th, .dynamic-table td{
+border-bottom: 1px solid grey;
+padding: 8px;
+  }
+  .dynamic-table tr:nth-child(odd){
+background:  #ff99ff;
+  }
+  .dynamic-table tr:hover{
+background: red;
+  }
+  .dynamic-table thead th {
+background: #330033;
+padding: 20px 8px;
+background: cyan;
+  }
 
 :root {
   --btn-3d-color: #f0e4dd;
