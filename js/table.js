@@ -73,3 +73,10 @@ function buildTable(data) {
     buildTable(arr);
   }
 })(data);
+
+document.addEventListener("DOMContentLoaded", () =>
+  console.log("domcontedloaded")
+);
+// window.onload = function() {
+// console.log("window onload");
+// };
