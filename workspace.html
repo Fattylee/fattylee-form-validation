@@ -10,28 +10,8 @@
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
     <link rel="stylesheet" href="./css/workspace.css" />
-    <style>
-      .js-site {
-        display: none;
-      }
-      .no-js {
-        padding: 20px;
-        text-align: center;
-      }
-      .no-js span {
-        font-size: 50px;
-        text-transform: uppercase;
-        text-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
-        color: greenyellow;
-      }
-    </style>
-    <script>
-      window.onload = function () {
-        document.querySelector(".js-site").className = "container";
-        document.querySelector(".no-js").className = "js-site no-js";
-      };
-    </script>
   </head>
+
   <body>
     <nav class="nav">
       <ul>
@@ -41,7 +21,19 @@
         <li><a href="#">home-4</a></li>
       </ul>
     </nav>
-    <div class="container js-site">
+    <noscript class="no-js">
+      <style>
+        .hidePage {
+          display: none;
+        }
+      </style>
+      <h1>
+        Oops..! No Javascript Enabled. please enable javascript
+        <span>or</span> choose a different browser for best experience
+      </h1>
+    </noscript>
+
+    <div class="container hidePage">
       <div class="header">
         <h1>Workspace freestyling</h1>
       </div>
@@ -105,11 +97,5 @@
     </script>
     <!-- <script src="./js/main.js"></script> -->
     <script src="./js/table.js"></script>
-    <div class="no-js">
-      <h1>
-        Oops..! No Javascript Enabled. please enable javascript
-        <span>or</span> choose a different browser for best experience
-      </h1>
-    </div>
   </body>
 </html>
