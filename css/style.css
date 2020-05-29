@@ -222,9 +222,6 @@ nav li.active a {
 /*-------x------ LOADER ------x-------*/
 
 /*------- No js styling --------*/
-.js-site {
-  display: none;
-}
 .no-js {
   padding: 20px;
   text-align: center;
